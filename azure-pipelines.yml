@@ -13,11 +13,11 @@ steps:
 
 - task: Application security testing@2025
   inputs:
-    projectName: 'AzureDevops'
+    projectName: 'Azuredevops'
     enableProxy: false
     enableSastScan: true
+    CheckmarxService: 'CxSAST Connection'
     enableSastBranching: false
     incScan: false
     generatePDFReport: true
     enableDependencyScan: false
-
