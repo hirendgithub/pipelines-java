@@ -16,7 +16,7 @@ steps:
     projectName: 'Azuredevops'
     enableProxy: false
     enableSastScan: true
-    CheckmarxService: 'CxSAST Connection'
+    CheckmarxService: 'Sast Connection'
     enableSastBranching: false
     incScan: false
     generatePDFReport: true
