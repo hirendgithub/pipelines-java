@@ -7,7 +7,7 @@ trigger:
 - main
 
 pool:
-  vmImage: ubuntu-latest
+  vmImage: Azure Pipelines
 
 steps:
 - task: Maven@3
@@ -20,3 +20,14 @@ steps:
     publishJUnitResults: true
     testResultsFiles: '**/surefire-reports/TEST-*.xml'
     goals: 'package'
+
+- task: Application security testing@2025
+  inputs:
+    projectName: 'AzureDevops'
+    enableProxy: false
+    enableSastScan: true
+    enableSastBranching: false
+    incScan: false
+    generatePDFReport: true
+    enableDependencyScan: false
+
